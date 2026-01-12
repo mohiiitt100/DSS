@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK Sofa Cushion | Indore's Best Sofa, Curtains & Mattress Experts</title>
+    <meta name="description" content="AK Sofa Cushion Indore - Specialists in Sofa manufacturing, repairing, curtains (parde), and mattresses (gadde). Serving Alok Nagar Mushakedi and Indore since 2018.">
+    <meta name="keywords" content="Sofa Repair Indore, Curtains, Parde, Mattress, Gadde, AK Sofa Cushion, Sofa Manufacturer, Alok Nagar Mushakedi">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f4c228',
+                        secondary: '#2C3E50',
+                        accent: '#F5F5DC'
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #B8860B; border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: #8B6914; }
+
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=2070&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        .fade-in { opacity: 0; transform: translateY(30px); }
+        .slide-in-left { opacity: 0; transform: translateX(-50px); }
+        .slide-in-right { opacity: 0; transform: translateX(50px); }
+        .scale-in { opacity: 0; transform: scale(0.9); }
+
+        @media (max-width: 768px) {
+            .hero-bg { background-attachment: scroll; }
+            .whatsapp-float { bottom: 20px; right: 20px; width: 50px; height: 50px; font-size: 25px; }
+        }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex items-center justify-between h-full relative">
+                
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 z-20 cursor-pointer group">
+                    <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center overflow-hidden border-2 border-transparent group-hover:border-primary transition-colors">
+                        <img src="./images/ak-logo.png" alt="Sofa Cushion Logo" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-xl md:text-2xl font-playfair font-bold text-gray-900 tracking-tight">
+                        Sofa <span class="text-yellow-600">Cushion</span>
+                    </span>
+                </a>
+                
+                <nav class="hidden md:flex space-x-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <a href="./index.html" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors text-lg">Home</a>
+                    <a href="About.html" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors text-lg">About Us</a>
+                    <a href="Gallery.html" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors text-lg">Gallery</a>
+                    <a href="Contact.html" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors text-lg">Contact</a>
+                </nav>
+                
+                <div class="flex items-center gap-4 z-20">
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-pink-600 transition-colors"><i class="ri-instagram-line text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors"><i class="ri-facebook-circle-fill text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-green-500 transition-colors"><i class="ri-whatsapp-line text-2xl"></i></a>
+                    </div>
+
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700 hover:text-yellow-600 focus:outline-none">
+                        <i id="menu-icon" class="ri-menu-line text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden fixed top-20 left-0 right-0 bg-white shadow-xl border-t border-gray-100 z-40 md:hidden overflow-y-auto max-h-[calc(100vh-5rem)]">
+            <div class="flex flex-col p-4 space-y-2">
+                <a href="./index.html" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-yellow-600 font-medium text-lg rounded-lg transition-colors border-b border-gray-100">Home</a>
+                <a href="About.html" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-yellow-600 font-medium text-lg rounded-lg transition-colors border-b border-gray-100">About Us</a>
+                <a href="Gallery.html" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-yellow-600 font-medium text-lg rounded-lg transition-colors border-b border-gray-100">Gallery</a>
+                <a href="Contact.html" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-yellow-600 font-medium text-lg rounded-lg transition-colors">Contact</a>
+                
+                <div class="flex justify-center items-center gap-8 pt-6 pb-4 mt-2">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-pink-600 hover:bg-pink-50 transition-colors"><i class="ri-instagram-line text-2xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-blue-600 hover:bg-blue-50 transition-colors"><i class="ri-facebook-circle-fill text-2xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-green-500 hover:bg-green-50 transition-colors"><i class="ri-whatsapp-line text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+   <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    
+    <div id="hero-slider" class="absolute inset-0 w-full h-full z-0">
+        
+        <div class="bg-slide active">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center md:hidden" 
+                 style="background-image: url('./images/1.jpeg');"></div>
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center hidden md:block" 
+                 style="background-image: url('./images/1.jpeg');"></div>
+        </div>
+
+        <div class="bg-slide">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center md:hidden" 
+                 style="background-image: url('./images/2.jpeg');"></div>
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center hidden md:block" 
+                 style="background-image: url('./images/2.jpeg');"></div>
+        </div>
+
+        <div class="bg-slide">
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center md:hidden" 
+                 style="background-image: url('./images/3.jpeg');"></div>
+            <div class="absolute inset-0 w-full h-full bg-cover bg-center hidden md:block" 
+                 style="background-image: url('./images/3.jpeg');"></div>
+        </div>
+
+    </div>
+
+    <div class="absolute inset-0 bg-black/50 z-10"></div>
+
+    <div class="relative z-20 text-center text-white max-w-4xl mx-auto px-4 mt-16">
+        <span class="text-primary font-semibold tracking-widest uppercase mb-4 block animate-pulse">Since 2018 in Indore</span>
+        <h1 class="hero-title text-5xl md:text-7xl font-playfair font-bold mb-6 leading-tight">
+            AK  <br>
+            <span class="text-primary">Sofa Cushion</span>
+        </h1>
+        <p class="hero-subtitle text-xl md:text-2xl mb-8 font-light opacity-90 max-w-2xl mx-auto">
+            Specialists in Sofa Repairing, New Sofa Making, Custom Curtains (Parde) & Mattresses (Gadde).
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center hero-cta">
+            <a href="https://wa.me/919977243180?text=Hello%20AK%20Sofa,%20I%20want%20to%20inquire%20about..." class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-button font-medium text-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                <i class="ri-whatsapp-line text-xl"></i> WhatsApp Now
+            </a>
+            <a href="#contact" class="bg-white hover:bg-gray-100 text-gray-900 px-8 py-4 rounded-button font-medium text-lg transition-all transform hover:scale-105 border border-white">
+                Book Visit
+            </a>
+        </div>
+    </div>
+
+    <style>
+        .bg-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+            z-index: 0;
+        }
+
+        .bg-slide.active {
+            opacity: 1;
+            z-index: 1;
+        }
+    </style>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const slides = document.querySelectorAll('.bg-slide');
+        let currentSlide = 0;
+        
+        if (slides.length > 0) {
+            setInterval(() => {
+                // Remove active class from current
+                slides[currentSlide].classList.remove('active');
+                
+                // Calculate next slide
+                currentSlide = (currentSlide + 1) % slides.length;
+                
+                // Add active class to next
+                slides[currentSlide].classList.add('active');
+            }, 2500); // 2.5 seconds change time
+        }
+    });
+    </script>
+</section>
+
+
+    <!-- ABout section start  -->
+
+    <section id="about" class="py-16 lg:py-24 bg-[#FDFBF7] relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-48 h-48 lg:w-64 lg:h-64 bg-primary/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+    <div class="absolute bottom-0 right-0 w-64 h-64 lg:w-96 lg:h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+            
+            <div class="slide-in-left order-2 lg:order-1 relative pl-4 pb-4 lg:pl-6 lg:pb-6 mx-auto lg:mx-0 max-w-lg lg:max-w-none w-full">
+                
+                <div class="relative z-10 rounded-sm overflow-hidden shadow-2xl border-[6px] lg:border-[8px] border-white">
+                    <img src="images/home about.jpeg" alt="Luxury Sofa Work" class="w-full h-[350px] lg:h-[500px] object-cover hover:scale-105 transition-transform duration-1000 ease-out">
+                    <div class="absolute inset-0 bg-black/10"></div>
+                </div>
+                
+                <div class="hidden md:block absolute -bottom-6 -left-6 w-2/3 z-20 rounded-sm overflow-hidden shadow-2xl border-[6px] border-white">
+                    <img src="images/home about 2.jpeg" alt="Fabric Detail" class="w-full h-40 lg:h-56 object-cover">
+                </div>
+                
+                <div class="absolute -top-6 -right-2 lg:-top-4 lg:-right-4 bg-primary text-white w-24 h-24 lg:w-28 lg:h-28 rounded-full flex flex-col items-center justify-center shadow-xl z-30 border-4 border-white/50 backdrop-blur-sm">
+                    <span class="text-[10px] lg:text-xs uppercase tracking-widest font-semibold opacity-90">Est.</span>
+                    <span class="text-2xl lg:text-3xl font-playfair font-bold">2018</span>
+                </div>
+
+                <div class="absolute top-6 -right-6 lg:top-10 lg:-right-10 opacity-10 -z-10">
+                    <svg width="100" height="100" lg:width="150" lg:height="150" viewBox="0 0 100 100" fill="none">
+                        <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <circle cx="2" cy="2" r="2" class="text-black" fill="currentColor" />
+                        </pattern>
+                        <rect width="100" height="100" fill="url(#dots)" />
+                    </svg>
+                </div>
+            </div>
+
+            <div class="slide-in-right order-1 lg:order-2 text-left">
+                <div class="flex items-center gap-4 mb-4 lg:mb-6">
+                    <span class="h-px w-12 lg:w-16 bg-primary"></span>
+                    <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs md:text-sm">The Art of Comfort</span>
+                </div>
+
+                <h2 class="text-3xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-900 mb-6 lg:mb-8 leading-tight">
+                    Crafting <span class="italic text-primary relative inline-block">Luxury
+                        <svg class="absolute w-full h-2 lg:h-3 -bottom-1 left-0 text-primary opacity-40" viewBox="0 0 100 10" preserveAspectRatio="none">
+                            <path d="M0 5 Q 50 10 100 5" stroke="currentColor" stroke-width="3" fill="none" />
+                        </svg>
+                    </span> <br>
+                    For Your Home
+                </h2>
+
+                <p class="text-base lg:text-lg text-gray-600 mb-6 leading-relaxed font-light">
+                    At <strong class="text-gray-900 font-medium">AK Sofa Cushion</strong>, we believe furniture is the soul of a living space. Nestled in <span class="text-gray-900 border-b border-primary/30 pb-0.5">Alok Nagar Mushakedi, Indore</span>, we have dedicated over 6 years to mastering the delicate balance between <span class="italic font-serif text-gray-800">aesthetic elegance</span> and <span class="italic font-serif text-gray-800">enduring comfort</span>.
+                </p>
+
+                <p class="text-base lg:text-lg text-gray-600 mb-8 lg:mb-10 leading-relaxed font-light hidden sm:block">
+                    Whether breathing new life into a vintage heirloom through expert restoration or creating a bespoke modern masterpiece, our artisans work with precision and passion.
+                </p>
+
+                <div class="grid grid-cols-2 gap-6 lg:gap-8 border-t border-gray-200 pt-6 lg:pt-8">
+                    <div class="group cursor-default">
+                        <div class="flex items-baseline gap-1 mb-1 lg:mb-2">
+                            <span class="text-4xl lg:text-5xl font-playfair font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">6</span>
+                            <span class="text-xl lg:text-2xl text-primary font-serif italic">+</span>
+                        </div>
+                        <h4 class="text-[10px] lg:text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Years of Excellence</h4>
+                    </div>
+
+                    <div class="group cursor-default">
+                        <div class="flex items-baseline gap-1 mb-1 lg:mb-2">
+                            <span class="text-4xl lg:text-5xl font-playfair font-bold text-gray-900 group-hover:text-primary transition-colors duration-300">1k</span>
+                            <span class="text-xl lg:text-2xl text-primary font-serif italic">+</span>
+                        </div>
+                        <h4 class="text-[10px] lg:text-xs font-bold uppercase tracking-widest text-gray-500 mb-1">Projects Delivered</h4>
+                    </div>
+                </div>
+
+                <div class="mt-8 lg:mt-10">
+                    <a href="#contact" class="inline-flex items-center gap-3 px-8 py-3 lg:px-10 lg:py-4 bg-gray-900 text-white text-xs lg:text-sm font-bold tracking-widest uppercase hover:bg-primary hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 group rounded-sm">
+                        Book Consultation
+                        <i class="ri-arrow-right-line transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ABout section end  -->
+     
+<!-- service section end     -->
+  <section id="services" class="py-24 bg-white relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center mb-16 fade-in">
+            <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs md:text-sm mb-3 block">Complete Home Furnishing</span>
+            <h2 class="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-900 mb-6">
+                Our Services
+            </h2>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto font-light">
+                Click on the WhatsApp icon below any service to inquire specifically about that product.
+            </p>
+        </div>
+        
+        <div class="flex flex-wrap justify-center gap-6 lg:gap-8 transition-all duration-500" id="services-container">
+
+            <div class="group relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(32%-1.5rem)] h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 scale-in">
+                <img src="sofa cushion/sofa home.jpeg" alt="Sofa Repairing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 class="text-2xl font-playfair font-bold text-white mb-2">Sofa Repairing</h3>
+                    <p class="text-gray-300 text-sm font-light mb-4">Expert repairing of damaged sofas. We fix sagging foam, broken springs, and structural damage.</p>
+                    <a href="https://wa.me/919977243180?text=Hello%20AK%20Sofa,%20I%20am%20interested%20in%20*Sofa%20Repairing*.%20Please%20share%20details." target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-green-700 transition-colors shadow-lg">
+                        <i class="ri-whatsapp-line text-lg"></i> Inquire Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(32%-1.5rem)] h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 scale-in">
+                <img src="sofa cushion/new sofa homa.jpeg" alt="New Sofa Making" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 class="text-2xl font-playfair font-bold text-white mb-2">New Sofa Making</h3>
+                    <p class="text-gray-300 text-sm font-light mb-4">Manufacturing brand new luxury sofas (L-Shape, Modern, Royal) customized for your home.</p>
+                    <a href="https://wa.me/919977243180?text=Hello%20AK%20Sofa,%20I%20am%20interested%20in%20*New%20Sofa%20Making*.%20Please%20share%20designs%20and%20rates." target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-green-700 transition-colors shadow-lg">
+                        <i class="ri-whatsapp-line text-lg"></i> Inquire Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(32%-1.5rem)] h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 scale-in">
+                <img src="sofa cushion/old sofa home.jpeg" alt="Old Sofa Refurbishing" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 class="text-2xl font-playfair font-bold text-white mb-2">Old Sofa Refurbishing</h3>
+                    <p class="text-gray-300 text-sm font-light mb-4">Make your old sofa look brand new. Complete fabric change and polishing (Purane Sofa Referring).</p>
+                    <a href="https://wa.me/919977243180?text=Hello%20AK%20Sofa,%20I%20want%20to%20*Refurbish%20my%20Old%20Sofa*.%20Please%20help." target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-green-700 transition-colors shadow-lg">
+                        <i class="ri-whatsapp-line text-lg"></i> Inquire Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(32%-1.5rem)] h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 scale-in hidden md:block service-extra">
+                <img src="Chair Making/chairhome.jpeg" alt="Chair Services" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 class="text-2xl font-playfair font-bold text-white mb-2">Chair Making & Repair</h3>
+                    <p class="text-gray-300 text-sm font-light mb-4">We make New Chairs and repair old ones (Purani Chair Repairing) including dining & office chairs.</p>
+                    <a href="https://wa.me/919977243180?text=Hello%20AK%20Sofa,%20I%20need%20service%20regarding%20*Chair%20Repairing/Making*." target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-green-700 transition-colors shadow-lg">
+                        <i class="ri-whatsapp-line text-lg"></i> Inquire Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(32%-1.5rem)] h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 scale-in hidden md:block service-extra">
+                <img src="Mattress & Quilting/mattress.jpeg" alt="Mattress & Quilting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 class="text-2xl font-playfair font-bold text-white mb-2">Mattress & Quilting</h3>
+                    <p class="text-gray-300 text-sm font-light mb-4">Custom Mattresses (Gadde), Pillows, and professional Mattress Quilting services.</p>
+                    <a href="https://wa.me/919977243180?text=Hello%20AK%20Sofa,%20I%20am%20interested%20in%20*Mattress%20(Gadde)%20and%20Quilting*." target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-green-700 transition-colors shadow-lg">
+                        <i class="ri-whatsapp-line text-lg"></i> Inquire Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(32%-1.5rem)] h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 scale-in hidden md:block service-extra">
+                <img src="sofa cushion/sofa cover home.jpeg" alt="Sofa Covers" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 class="text-2xl font-playfair font-bold text-white mb-2">Full Sofa Covers</h3>
+                    <p class="text-gray-300 text-sm font-light mb-4">Custom fitted full-body sofa covers for protection and elegant looks.</p>
+                    <a href="https://wa.me/919977243180?text=Hello%20AK%20Sofa,%20I%20want%20to%20order%20*Full%20Sofa%20Covers*." target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-green-700 transition-colors shadow-lg">
+                        <i class="ri-whatsapp-line text-lg"></i> Inquire Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(32%-1.5rem)] h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 scale-in hidden md:block service-extra">
+                <img src="Foam Sales & Visit/visit home.jpeg" alt="Foam Solutions" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 class="text-2xl font-playfair font-bold text-white mb-2">Foam Sales & Visit</h3>
+                    <p class="text-gray-300 text-sm font-light mb-4">We provide foam from <strong>all companies</strong>. We also arrange <strong>home visits</strong> for foam selection.</p>
+                    <a href="https://wa.me/919977243180?text=Hello%20AK%20Sofa,%20I%20need%20details%20about%20*Foam%20Sales%20and%20Home%20Visit*." target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-green-700 transition-colors shadow-lg">
+                        <i class="ri-whatsapp-line text-lg"></i> Inquire Now
+                    </a>
+                </div>
+            </div>
+
+            <div class="group relative w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(32%-1.5rem)] h-[450px] rounded-xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 scale-in hidden md:block service-extra">
+                <img src="Printed Kapada, Parde/printed home.jpeg" alt="Printed Kapada & Parde" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-90 group-hover:opacity-95 transition-opacity duration-300"></div>
+                <div class="absolute bottom-0 left-0 p-8 w-full transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                    <h3 class="text-2xl font-playfair font-bold text-white mb-2">Printed Kapada, Parde</h3>
+                    <p class="text-gray-300 text-sm font-light mb-4"><strong>Printed Kapada</strong>, <strong>Parde (Curtains)</strong>, Sofa Leather & <strong>Sabhi tarah ka kapada</strong> available.</p>
+                    <a href="https://wa.me/919977243180?text=Hello%20AK%20Sofa,%20I%20want%20to%20see%20*Printed%20Kapada%20(Fabric),%20Leather%20or%20Parde*." target="_blank" class="inline-flex items-center gap-2 bg-green-600 text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider hover:bg-green-700 transition-colors shadow-lg">
+                        <i class="ri-whatsapp-line text-lg"></i> Inquire Now
+                    </a>
+                </div>
+            </div>
+            </div>
+
+        <div id="view-more-container" class="mt-8 text-center md:hidden">
+            <button onclick="showAllServices()" class="px-8 py-3 border-2 border-primary text-primary font-bold uppercase tracking-widest text-xs rounded-full hover:bg-primary hover:text-white transition-all">
+                View All Services (+5 More)
+            </button>
+        </div>
+
+        <div id="gallery-btn-container" class="mt-12 text-center hidden md:block">
+            <a href="Gallery.html" class="inline-flex items-center gap-4 px-12 py-5 bg-gray-900 text-white text-sm font-bold tracking-widest uppercase hover:bg-primary hover:text-white transition-all duration-300 shadow-xl hover:shadow-2xl hover:-translate-y-1 group rounded-sm">
+                View Gallery
+                <i class="ri-gallery-line text-lg transition-transform group-hover:translate-x-2"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function showAllServices() {
+        // 1. Show hidden services
+        const hiddenServices = document.querySelectorAll('.service-extra');
+        hiddenServices.forEach(service => {
+            service.classList.remove('hidden');
+            service.classList.add('fade-in'); 
+        });
+
+        // 2. Hide 'View More' button
+        document.getElementById('view-more-container').style.display = 'none';
+
+        // 3. Show 'View Gallery' button
+        document.getElementById('gallery-btn-container').classList.remove('hidden');
+    }
+</script>
+<!-- service section end -->
+
+   <section id="gallery" class="py-24 bg-stone-50 relative overflow-hidden">
+    
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <span class="absolute -top-10 -left-10 text-[200px] font-playfair font-bold text-gray-200/40 select-none leading-none">Art</span>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 fade-in">
+            <div class="max-w-2xl">
+                <span class="text-primary font-bold tracking-[0.2em] uppercase text-xs mb-4 block">Our Portfolio</span>
+                <h2 class="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold text-gray-900 leading-tight">
+                    Crafted with <span class="text-primary italic">Precision</span>
+                </h2>
+            </div>
+            <div class="mt-8 md:mt-0 flex gap-4">
+                <div class="md:hidden flex items-center gap-2">
+                    <span class="text-gray-500 text-xs uppercase tracking-widest animate-pulse">Swipe to see work <i class="ri-arrow-right-line ml-1"></i></span>
+                </div>
+                <a href="#contact" class="hidden md:inline-block px-8 py-3 border border-gray-300 hover:border-primary hover:text-white hover:bg-primary transition-all rounded-sm text-sm font-bold uppercase tracking-widest text-gray-900">
+                    Book A Visit
+                </a>
+            </div>
+        </div>
+        
+        <div class="hidden md:grid grid-cols-3 gap-8 h-[600px]">
+            
+            <div class="space-y-8 mt-0">
+                <div class="group relative h-[350px] overflow-hidden rounded-sm cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-primary text-[10px] font-bold uppercase tracking-widest">Restoration</span>
+                        <h3 class="text-xl font-playfair text-white mt-1">Royal Velvet Sofa</h3>
+                    </div>
+                </div>
+                <div class="group relative h-[200px] overflow-hidden rounded-sm cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500 bg-white border border-gray-100 p-6 flex items-center justify-center">
+                    <div class="text-center">
+                        <span class="text-primary text-4xl mb-2 block"><i class="ri-scissors-cut-line"></i></span>
+                        <h3 class="text-2xl font-playfair text-gray-900">Custom Cuts</h3>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Tailored Service</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8 -mt-12">
+                <div class="group relative h-[500px] overflow-hidden rounded-sm cursor-pointer shadow-2xl hover:shadow-[0_20px_50px_rgba(0,0,0,0.2)] transition-all duration-500 border-4 border-white">
+                    <img src="https://images.unsplash.com/photo-1505693416381-9c3a92815db9?q=80&w=800" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                        <span class="text-primary text-xs font-bold uppercase tracking-widest">Signature Project</span>
+                        <h3 class="text-3xl font-playfair text-white mt-2">Luxury Bedroom Suite</h3>
+                        <p class="text-gray-200 text-sm mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 font-light">Custom Headboard & Premium Mattress</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-8 mt-8">
+                <div class="group relative h-[250px] overflow-hidden rounded-sm cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=800" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-primary text-[10px] font-bold uppercase tracking-widest">Upholstery</span>
+                        <h3 class="text-xl font-playfair text-white mt-1">Accent Chair</h3>
+                    </div>
+                </div>
+                <div class="group relative h-[300px] overflow-hidden rounded-sm cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500">
+                    <img src="https://images.unsplash.com/photo-1618220179428-22790b461013?q=80&w=800" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-black/80 via-black/40 to-transparent translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                        <span class="text-primary text-[10px] font-bold uppercase tracking-widest">Fabrics</span>
+                        <h3 class="text-xl font-playfair text-white mt-1">Premium Cloth</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden flex overflow-x-auto gap-4 snap-x snap-mandatory pb-8 scrollbar-hide">
+            
+            <div class="snap-center shrink-0 w-[85vw] h-[450px] relative rounded-xl overflow-hidden shadow-xl border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=800" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <span class="bg-white text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest mb-3 inline-block rounded-sm shadow-sm">Restoration</span>
+                    <h3 class="text-3xl font-playfair text-white">Royal Sofa Repair</h3>
+                    <p class="text-gray-300 text-sm mt-2 font-light">Complete fabric replacement and foam restoration.</p>
+                </div>
+            </div>
+
+            <div class="snap-center shrink-0 w-[85vw] h-[450px] relative rounded-xl overflow-hidden shadow-xl border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1505693416381-9c3a92815db9?q=80&w=800" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <span class="bg-primary text-white text-[10px] font-bold px-3 py-1 uppercase tracking-widest mb-3 inline-block rounded-sm shadow-sm">New Making</span>
+                    <h3 class="text-3xl font-playfair text-white">Luxury Bed Back</h3>
+                    <p class="text-gray-300 text-sm mt-2 font-light">Custom headboard design with velvet finish.</p>
+                </div>
+            </div>
+
+            <div class="snap-center shrink-0 w-[85vw] h-[450px] relative rounded-xl overflow-hidden shadow-xl border border-gray-100">
+                <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800" class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-80"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <span class="bg-white text-black text-[10px] font-bold px-3 py-1 uppercase tracking-widest mb-3 inline-block rounded-sm shadow-sm">Decor</span>
+                    <h3 class="text-3xl font-playfair text-white">Modern Curtains</h3>
+                    <p class="text-gray-300 text-sm mt-2 font-light">Sheer and blackout curtains installation.</p>
+                </div>
+            </div>
+
+             <div class="snap-center shrink-0 w-[85vw] h-[450px] relative rounded-xl overflow-hidden shadow-xl bg-white flex flex-col items-center justify-center text-center p-8 border border-gray-100">
+                <div class="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mb-6">
+                    <i class="ri-image-2-line text-3xl text-primary"></i>
+                </div>
+                <h3 class="text-3xl font-playfair text-gray-900 mb-4">Want to see more?</h3>
+                <p class="text-gray-500 mb-8 font-light">Browse our full gallery of 100+ projects.</p>
+                <a href="Gallery.html" class="px-8 py-4 bg-gray-900 text-white font-bold uppercase tracking-widest text-xs rounded-full hover:bg-primary transition-colors shadow-lg">
+                    Open Gallery
+                </a>
+            </div>
+
+        </div>
+
+        <div class="mt-16 text-center hidden md:block">
+            <a href="Gallery.html" class="inline-block relative px-12 py-4 bg-transparent border border-gray-900 text-gray-900 text-sm font-bold uppercase tracking-widest overflow-hidden group hover:text-white transition-colors duration-300 rounded-sm">
+                <span class="absolute inset-0 w-full h-full bg-gray-900 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-300 ease-out"></span>
+                <span class="relative flex items-center gap-2">
+                    View Complete Gallery <i class="ri-arrow-right-line"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+    }
+    .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+</style>
+
+    <section class="bg-secondary py-16 text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/fabric-of-squares.png');"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-playfair font-bold mb-8">Why Indore Chooses AK Sofa?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div class="p-4">
+                    <i class="ri-timer-flash-line text-4xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Fast Service</h4>
+                    <p class="text-gray-300 text-sm">Timely delivery and quick repairs.</p>
+                </div>
+                <div class="p-4">
+                    <i class="ri-money-rupee-circle-line text-4xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Best Price</h4>
+                    <p class="text-gray-300 text-sm">Competitive rates in the market.</p>
+                </div>
+                <div class="p-4">
+                    <i class="ri-medal-line text-4xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Quality Material</h4>
+                    <p class="text-gray-300 text-sm">Premium foam and fabrics used.</p>
+                </div>
+                <div class="p-4">
+                    <i class="ri-customer-service-2-line text-4xl text-primary mb-4"></i>
+                    <h4 class="text-xl font-bold mb-2">Home Visit</h4>
+                    <p class="text-gray-300 text-sm">We come to your place for measurements.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div class="slide-in-left">
+                    <h2 class="text-4xl font-playfair font-bold text-gray-900 mb-6">Contact Us</h2>
+                    <p class="text-lg text-gray-600 mb-10">
+                        Ready to change the look of your home? Call us or visit our shop in Indore.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-6 group">
+                            <div class="w-14 h-14 bg-white shadow-md rounded-full flex items-center justify-center text-primary text-2xl group-hover:bg-primary group-hover:text-white transition-all">
+                                <i class="ri-map-pin-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Address</h4>
+                                <p class="text-gray-600">Alok Nagar Mushakedi, Mushakedi,<br>Indore, Madhya Pradesh</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-6 group">
+                            <div class="w-14 h-14 bg-white shadow-md rounded-full flex items-center justify-center text-primary text-2xl group-hover:bg-primary group-hover:text-white transition-all">
+                                <i class="ri-phone-fill"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Phone</h4>
+                                <p class="text-gray-600">
+                                    <a href="tel:9977243180" class="hover:text-primary transition-colors block">+91 9977243180</a>
+                                    <a href="tel:8461994334" class="hover:text-primary transition-colors block">+91 8461994334</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-6 group">
+                            <div class="w-14 h-14 bg-white shadow-md rounded-full flex items-center justify-center text-primary text-2xl group-hover:bg-primary group-hover:text-white transition-all">
+                                <i class="ri-time-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Working Hours</h4>
+                                <p class="text-gray-600">All Days (Mon-Sun)<br>9:00 AM - 11:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-6 group">
+                            <div class="w-14 h-14 bg-white shadow-md rounded-full flex items-center justify-center text-primary text-2xl group-hover:bg-primary group-hover:text-white transition-all">
+                                <i class="ri-mail-send-line"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Email</h4>
+                                <p class="text-gray-600">abhishekabhishekharan@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide-in-right">
+                    <form class="glass-card p-8 rounded-2xl shadow-xl space-y-6">
+                        <h3 class="text-2xl font-bold mb-4">Send us a message</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Your Name">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Your Mobile">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Service Required</label>
+                            <select class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+                                <option>Sofa Repairing</option>
+                                <option>New Sofa Making</option>
+                                <option>Mattress (Gadde)</option>
+                                <option>Curtains (Parde)</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                            <textarea rows="4" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="How can we help you?"></textarea>
+                        </div>
+                        
+                        <button type="button" onclick="window.location.href='https://wa.me/919977243180'" class="w-full bg-primary hover:bg-yellow-600 text-white py-4 rounded-button font-bold text-lg transition-all transform hover:scale-105 shadow-lg">
+                            Send Enquiry via WhatsApp
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-secondary text-white pt-16 pb-8 border-t-4 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                   <a href="index.html" class="flex items-center gap-4 mb-6 group">
+    <div class="h-14 w-14 flex-shrink-0 bg-black rounded-full flex items-center justify-center border-2 border-transparent group-hover:border-primary transition-colors p-1">
+         <img src="./images/ak-logo.png" alt="AK Sofa Logo" class="h-full w-full object-contain">
+    </div>
+   
+    <h3 class="text-2xl font-playfair font-bold text-white tracking-tight">
+      Sofa Cushion
+    </h3>
+</a>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your trusted partner for home comfort in Indore. We specialize in Sofa Repairing, Manufacturing, Curtains, and Mattresses with premium quality materials.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-instagram-line text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/919977243180" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-green-500 transition-colors">
+                            <i class="ri-whatsapp-line text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-primary">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="./index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="About.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="Gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="Contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-primary">Locate Us</h4>
+                    <div class="space-y-4 text-gray-400">
+                        <p class="flex items-start gap-3">
+                            <i class="ri-map-pin-line mt-1 text-primary"></i>
+                            Alok Nagar , Mushakedi, Indore
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="ri-phone-fill text-primary"></i>
+                            +91 9977243180
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="ri-mail-line text-primary"></i>
+                            abhishekabhishekharan@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+          <div class="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+    <p>
+        &copy; 2024 AK Sofa Cushion. All rights reserved. | 
+        Designed & Developed by 
+        <a href="https://digitalsuccesssolutions.in/" target="_blank" class="font-bold text-gray-300 hover:text-primary transition-colors">
+            Digital Success Solutions
+        </a>
+    </p>
+</div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919977243180" class="whatsapp-float" target="_blank">
+        <i class="ri-whatsapp-line"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. Initialize GSAP ScrollTrigger
+            gsap.registerPlugin(ScrollTrigger);
+
+            // 2. Hero Section Animations
+            const tl = gsap.timeline();
+            tl.from(".hero-title", { y: 50, opacity: 0, duration: 1, ease: "power3.out" })
+              .from(".hero-subtitle", { y: 30, opacity: 0, duration: 0.8 }, "-=0.5")
+              .from(".hero-cta", { y: 20, opacity: 0, duration: 0.8 }, "-=0.5");
+
+            // 3. Scroll Triggers for Elements
+            const animateElements = (selector, fromVars) => {
+                gsap.utils.toArray(selector).forEach(element => {
+                    gsap.to(element, {
+                        scrollTrigger: { trigger: element, start: "top 80%" },
+                        ...fromVars
+                    });
+                });
+            };
+
+            animateElements('.fade-in', { y: 0, opacity: 1, duration: 1 });
+            animateElements('.slide-in-left', { x: 0, opacity: 1, duration: 1 });
+            animateElements('.slide-in-right', { x: 0, opacity: 1, duration: 1 });
+            
+            gsap.utils.toArray('.scale-in').forEach(element => {
+                gsap.to(element, {
+                    scrollTrigger: { trigger: element, start: "top 85%" },
+                    scale: 1, opacity: 1, duration: 0.8, stagger: 0.2
+                });
+            });
+
+            // 4. MOBILE MENU LOGIC (Consolidated and Fixed)
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if(btn && menu && icon) {
+                // Toggle Menu
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Stop click from bubbling to document
+                    menu.classList.toggle('hidden');
+                    
+                    // Toggle Icon
+                    if (menu.classList.contains('hidden')) {
+                        icon.classList.remove('ri-close-line');
+                        icon.classList.add('ri-menu-line');
+                    } else {
+                        icon.classList.remove('ri-menu-line');
+                        icon.classList.add('ri-close-line');
+                    }
+                });
+
+                // Close menu when clicking ANY link inside it
+                const links = menu.querySelectorAll('a');
+                links.forEach(link => {
+                    link.addEventListener('click', () => {
+                        menu.classList.add('hidden');
+                        icon.classList.remove('ri-close-line');
+                        icon.classList.add('ri-menu-line');
+                    });
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!menu.contains(e.target) && !btn.contains(e.target) && !menu.classList.contains('hidden')) {
+                        menu.classList.add('hidden');
+                        icon.classList.remove('ri-close-line');
+                        icon.classList.add('ri-menu-line');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

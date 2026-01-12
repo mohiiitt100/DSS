@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AK Sofa Cushion Indore</title>
+    <meta name="description" content="Contact AK Sofa Cushion Indore. Call us at 9977243180 for home visits, sofa repairs, new furniture making, and foam selection. Located in Alok Nagar Mushakedi.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f4c228',
+                        secondary: '#2C3E50',
+                        accent: '#F5F5DC'
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #f4c228; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4a017; }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        /* Contact Page Header */
+        .page-header {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('./images/hero-bg2.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .fade-in { opacity: 0; transform: translateY(30px); }
+        .slide-in-left { opacity: 0; transform: translateX(-50px); }
+        .slide-in-right { opacity: 0; transform: translateX(50px); }
+    </style>
+</head>
+<body class="font-inter bg-gray-50 text-gray-800">
+
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex items-center justify-between h-full relative">
+                
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 z-20 cursor-pointer group">
+                    <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center overflow-hidden border-2 border-transparent group-hover:border-primary transition-colors">
+                        <img src="./images/ak-logo.png" alt="Sofa Cushion Logo" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-xl md:text-2xl font-playfair font-bold text-gray-900 tracking-tight">
+                        Sofa <span class="text-yellow-600">Cushion</span>
+                    </span>
+                </a>
+                
+                <nav class="hidden md:flex space-x-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <a href="index.html" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors text-lg">Home</a>
+                    <a href="About.html" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors text-lg">About Us</a>
+                    <a href="Gallery.html" class="text-gray-700 hover:text-yellow-600 font-medium transition-colors text-lg">Gallery</a>
+                    <a href="Contact.html" class="text-yellow-600 font-medium transition-colors text-lg border-b-2 border-yellow-600">Contact</a>
+                </nav>
+                
+                <div class="flex items-center gap-4 z-20">
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-pink-600 transition-colors"><i class="ri-instagram-line text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors"><i class="ri-facebook-circle-fill text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-green-500 transition-colors"><i class="ri-whatsapp-line text-2xl"></i></a>
+                    </div>
+
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700 hover:text-yellow-600 focus:outline-none">
+                        <i id="menu-icon" class="ri-menu-line text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden fixed top-20 left-0 right-0 bg-white shadow-xl border-t border-gray-100 z-40 md:hidden overflow-y-auto max-h-[calc(100vh-5rem)]">
+            <div class="flex flex-col p-4 space-y-2">
+                <a href="index.html" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-yellow-600 font-medium text-lg rounded-lg transition-colors border-b border-gray-100">Home</a>
+                <a href="About.html" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-yellow-600 font-medium text-lg rounded-lg transition-colors border-b border-gray-100">About Us</a>
+                <a href="Gallery.html" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-yellow-600 font-medium text-lg rounded-lg transition-colors border-b border-gray-100">Gallery</a>
+                <a href="Contact.html" class="block px-4 py-3 text-yellow-600 bg-gray-50 font-medium text-lg rounded-lg transition-colors border-b border-gray-100">Contact</a>
+                
+                <div class="flex justify-center items-center gap-8 pt-6 pb-4 mt-2">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-pink-600 hover:bg-pink-50 transition-colors"><i class="ri-instagram-line text-2xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-blue-600 hover:bg-blue-50 transition-colors"><i class="ri-facebook-circle-fill text-2xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-green-500 hover:bg-green-50 transition-colors"><i class="ri-whatsapp-line text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header h-[40vh] flex items-center justify-center relative mt-20">
+        <div class="text-center text-white fade-in px-4">
+            <span class="text-primary font-bold tracking-[0.3em] uppercase text-xs md:text-sm block mb-3">Let's Talk</span>
+            <h1 class="text-4xl md:text-6xl font-playfair font-bold mb-4">Contact Us</h1>
+            <p class="text-gray-300 max-w-xl mx-auto font-light">Ready to give your home a new look? Visit us or send us a message.</p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                
+                <div class="slide-in-left">
+                    <h2 class="text-3xl md:text-4xl font-playfair font-bold text-gray-900 mb-6">
+                        Get In <span class="text-primary">Touch</span>
+                    </h2>
+                    <p class="text-gray-600 mb-10 leading-relaxed">
+                        We provide free home visits for measurements and fabric selection. Contact us today to schedule your appointment.
+                    </p>
+
+                    <div class="space-y-8">
+                        <div class="flex items-start space-x-6 group">
+                            <div class="w-16 h-16 bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center text-primary text-3xl group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+                                <i class="ri-map-pin-2-fill"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Our Workshop</h4>
+                                <p class="text-gray-600">Alok Nagar Mushakedi, Mushakedi,<br>Indore, Madhya Pradesh</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-6 group">
+                            <div class="w-16 h-16 bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center text-primary text-3xl group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+                                <i class="ri-phone-fill"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Call Us</h4>
+                                <p class="text-gray-600 space-y-1">
+                                    <a href="tel:9977243180" class="block hover:text-primary transition-colors font-medium">+91 9977243180</a>
+                                    <a href="tel:8461994334" class="block hover:text-primary transition-colors font-medium">+91 8461994334</a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start space-x-6 group">
+                            <div class="w-16 h-16 bg-gray-50 border border-gray-100 rounded-full flex items-center justify-center text-primary text-3xl group-hover:bg-primary group-hover:text-white transition-all shadow-sm">
+                                <i class="ri-time-fill"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-900 mb-1">Working Hours</h4>
+                                <p class="text-gray-600">Monday - Sunday (All Days)</p>
+                                <p class="text-primary font-bold">9:00 AM - 11:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slide-in-right">
+                    <form id="contactForm" class="bg-gray-50 p-8 md:p-10 rounded-2xl shadow-lg border border-gray-100 relative overflow-hidden">
+                        <div class="absolute -top-10 -right-10 w-40 h-40 bg-primary/10 rounded-full blur-3xl"></div>
+
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6 relative z-10">Send us a Message</h3>
+                        
+                        <div class="space-y-6 relative z-10">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Enter your name" required>
+                            </div>
+                            
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+                                    <input type="tel" id="phone" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Mobile Number" required>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Service</label>
+                                    <select id="service" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all">
+                                        <option value="Sofa Repair">Sofa Repairing</option>
+                                        <option value="New Sofa">New Sofa Making</option>
+                                        <option value="Mattress">Mattress / Gadde</option>
+                                        <option value="Curtains">Curtains / Parde</option>
+                                        <option value="Foam Visit">Foam Home Visit</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-3 bg-white border border-gray-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Tell us about your requirement..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white py-4 rounded-lg font-bold text-lg transition-all transform hover:scale-[1.02] shadow-lg flex items-center justify-center gap-2">
+                                <i class="ri-whatsapp-line text-2xl"></i> Send via WhatsApp
+                            </button>
+                            <p class="text-xs text-gray-500 text-center mt-2">This will open WhatsApp with your details.</p>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="h-[400px] w-full bg-gray-200 grayscale hover:grayscale-0 transition-all duration-500">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3680.606772740924!2d75.9064!3d22.7056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fd265b7507ad%3A0x633e943237373f7!2sAlok%20Nagar%2C%20Indore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1709664562819!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <section class="py-20 bg-[#FDFBF7]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-playfair font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-4">
+                <div class="bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2 flex items-center gap-2"><i class="ri-question-fill text-primary"></i> Do you provide home visits?</h3>
+                    <p class="text-gray-600">Yes, we provide free home visits in Indore. We bring fabric catalogs and foam samples so you can choose in the comfort of your home.</p>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2 flex items-center gap-2"><i class="ri-question-fill text-primary"></i> Can you repair my old sofa?</h3>
+                    <p class="text-gray-600">Absolutely. We specialize in refurbishing old sofas. We change the fabric, replace the foam, and polish the wood to make it look brand new.</p>
+                </div>
+
+                <div class="bg-white border border-gray-100 rounded-lg p-6 shadow-sm">
+                    <h3 class="font-bold text-lg text-gray-900 mb-2 flex items-center gap-2"><i class="ri-question-fill text-primary"></i> Do you make custom mattresses?</h3>
+                    <p class="text-gray-600">Yes, we make custom mattresses (Gadde) of any size and thickness using high-density foam, bonded foam, or cotton as per your requirement.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-secondary text-white pt-16 pb-8 border-t-4 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                   <a href="index.html" class="flex items-center gap-4 mb-6 group">
+    <div class="h-14 w-14 flex-shrink-0 bg-black rounded-full flex items-center justify-center border-2 border-transparent group-hover:border-primary transition-colors p-1">
+         <img src="./images/ak-logo.png" alt="AK Sofa Logo" class="h-full w-full object-contain">
+    </div>
+   
+    <h3 class="text-2xl font-playfair font-bold text-white tracking-tight">
+      Sofa Cushion
+    </h3>
+</a>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your trusted partner for home comfort in Indore. We specialize in Sofa Repairing, Manufacturing, Curtains, and Mattresses with premium quality materials.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-instagram-line text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/919977243180" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-green-500 transition-colors">
+                            <i class="ri-whatsapp-line text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-primary">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="./index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="About.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="Gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="Contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-primary">Locate Us</h4>
+                    <div class="space-y-4 text-gray-400">
+                        <p class="flex items-start gap-3">
+                            <i class="ri-map-pin-line mt-1 text-primary"></i>
+                            Alok Nagar , Mushakedi, Indore
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="ri-phone-fill text-primary"></i>
+                            +91 9977243180
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="ri-mail-line text-primary"></i>
+                            abhishekabhishekharan@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+          <div class="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+    <p>
+        &copy; 2024 AK Sofa Cushion. All rights reserved. | 
+        Designed & Developed by 
+        <a href="https://digitalsuccesssolutions.in/" target="_blank" class="font-bold text-gray-300 hover:text-primary transition-colors">
+            Digital Success Solutions
+        </a>
+    </p>
+</div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919977243180" class="whatsapp-float" target="_blank">
+        <i class="ri-whatsapp-line"></i>
+    </a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const animateElements = (selector, fromVars) => {
+                gsap.utils.toArray(selector).forEach(element => {
+                    gsap.to(element, {
+                        scrollTrigger: { trigger: element, start: "top 80%" },
+                        ...fromVars
+                    });
+                });
+            };
+
+            animateElements('.fade-in', { y: 0, opacity: 1, duration: 1 });
+            animateElements('.slide-in-left', { x: 0, opacity: 1, duration: 1 });
+            animateElements('.slide-in-right', { x: 0, opacity: 1, duration: 1 });
+
+            // Mobile Menu Logic
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if(btn && menu && icon) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('hidden');
+                    if (menu.classList.contains('hidden')) {
+                        icon.classList.remove('ri-close-line');
+                        icon.classList.add('ri-menu-line');
+                    } else {
+                        icon.classList.remove('ri-menu-line');
+                        icon.classList.add('ri-close-line');
+                    }
+                });
+                document.addEventListener('click', function(e) {
+                    if (!menu.contains(e.target) && !btn.contains(e.target) && !menu.classList.contains('hidden')) {
+                        menu.classList.add('hidden');
+                        icon.classList.remove('ri-close-line');
+                        icon.classList.add('ri-menu-line');
+                    }
+                });
+            }
+
+            // --- WHATSAPP FORM LOGIC ---
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault(); // Prevent standard form submit
+
+                // Get values
+                const name = document.getElementById('name').value;
+                const phone = document.getElementById('phone').value;
+                const service = document.getElementById('service').value;
+                const message = document.getElementById('message').value;
+
+                // Create WhatsApp Message String
+                const whatsappMessage = `Hello AK Sofa, I have an inquiry.%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Service:* ${service}%0A*Message:* ${message}`;
+
+                // Redirect to WhatsApp
+                window.open(`https://wa.me/919977243180?text=${whatsappMessage}`, '_blank');
+            });
+        });
+    </script>
+</body>
+</html>

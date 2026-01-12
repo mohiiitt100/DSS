@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | AK Sofa Cushion Indore</title>
+    <meta name="description" content="View our latest work at AK Sofa Cushion. Browse photos of Sofa Repair, New Sofa Making, Curtains, Chairs and Mattresses.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f4c228', /* Ye aapka main Yellow color hai */
+                        secondary: '#2C3E50',
+                        accent: '#F5F5DC'
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'inter': ['Inter', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'button': '8px'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        html { scroll-behavior: smooth; }
+        body { overflow-x: hidden; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #f4c228; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d4a017; }
+
+        .category-scroll::-webkit-scrollbar { height: 4px; }
+        .category-scroll::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+
+        /* WhatsApp Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            background-color: #128C7E;
+        }
+
+        /* Header Background Image Fix */
+        .gallery-header {
+            /* Agar local image nahi mili to ye dark grey background dikhega */
+            background-color: #2C3E50; 
+            /* Yahan apni image ka sahi path dalein */
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./images/000.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        /* Animation Classes */
+        .fade-in { opacity: 0; transform: translateY(30px); }
+        .fade-in-up { animation: fadeInUp 0.5s ease-out forwards; }
+        
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .gallery-item { transition: all 0.3s ease-in-out; }
+        .gallery-item.hidden { display: none; }
+    </style>
+    </head>
+<body class="font-inter bg-gray-50 text-gray-800">
+
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-white shadow-md h-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex items-center justify-between h-full relative">
+                
+                <a href="index.html" class="flex-shrink-0 flex items-center gap-2 z-20 cursor-pointer group">
+                    <div class="w-12 h-12 bg-black text-white rounded-full flex items-center justify-center overflow-hidden border-2 border-transparent group-hover:border-primary transition-colors">
+                        <img src="./images/ak-logo.png" alt="AK" class="w-full h-full object-cover">
+                    </div>
+                    <span class="text-xl md:text-2xl font-playfair font-bold text-gray-900 tracking-tight">
+                        Sofa <span class="text-primary">Cushion</span>
+                    </span>
+                </a>
+                
+                <nav class="hidden md:flex space-x-8 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <a href="index.html" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">Home</a>
+                    <a href="About.html" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">About Us</a>
+                    <a href="Gallery.html" class="text-primary font-medium transition-colors text-lg border-b-2 border-primary">Gallery</a>
+                    <a href="Contact.html" class="text-gray-700 hover:text-primary font-medium transition-colors text-lg">Contact</a>
+                </nav>
+                
+                <div class="flex items-center gap-4 z-20">
+                    <div class="hidden md:flex items-center space-x-4">
+                        <a href="#" class="text-gray-600 hover:text-pink-600 transition-colors"><i class="ri-instagram-line text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors"><i class="ri-facebook-circle-fill text-2xl"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-green-500 transition-colors"><i class="ri-whatsapp-line text-2xl"></i></a>
+                    </div>
+
+                    <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-700 hover:text-primary focus:outline-none">
+                        <i id="menu-icon" class="ri-menu-line text-3xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="mobile-menu" class="hidden fixed top-20 left-0 right-0 bg-white shadow-xl border-t border-gray-100 z-40 md:hidden overflow-y-auto max-h-[calc(100vh-5rem)]">
+            <div class="flex flex-col p-4 space-y-2">
+                <a href="index.html" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-primary font-medium text-lg rounded-lg transition-colors border-b border-gray-100">Home</a>
+                <a href="About.html" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-primary font-medium text-lg rounded-lg transition-colors border-b border-gray-100">About Us</a>
+                <a href="Gallery.html" class="block px-4 py-3 text-primary bg-gray-50 font-medium text-lg rounded-lg transition-colors border-b border-gray-100">Gallery</a>
+                <a href="Contact.html" class="block px-4 py-3 text-gray-800 hover:bg-gray-50 hover:text-primary font-medium text-lg rounded-lg transition-colors">Contact</a>
+                
+                <div class="flex justify-center items-center gap-8 pt-6 pb-4 mt-2">
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-pink-600 hover:bg-pink-50 transition-colors"><i class="ri-instagram-line text-2xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-blue-600 hover:bg-blue-50 transition-colors"><i class="ri-facebook-circle-fill text-2xl"></i></a>
+                    <a href="#" class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-green-500 hover:bg-green-50 transition-colors"><i class="ri-whatsapp-line text-2xl"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="gallery-header h-[50vh] flex items-center relative mt-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-20">
+            <span class="text-primary font-bold tracking-[0.3em] uppercase text-sm block mb-2">Our Portfolio</span>
+            <h1 class="text-5xl md:text-7xl font-playfair font-bold text-white mb-6 leading-tight">
+                Our Recent <br> Masterpieces
+            </h1>
+            <div class="h-1 w-24 bg-primary"></div>
+            <p class="text-gray-200 mt-6 max-w-lg text-lg font-light">
+                Explore our finest work in sofa manufacturing, repairing, and luxury home decor across Indore.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="py-16 lg:py-24 min-h-screen">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+                
+                <aside class="w-full lg:w-1/4 lg:sticky lg:top-24 h-fit z-10">
+                    <h3 class="text-xl font-bold text-gray-900 mb-6 hidden lg:block border-l-4 border-primary pl-3 font-playfair">Project Categories</h3>
+                    <div class="category-scroll flex lg:flex-col overflow-x-auto lg:overflow-visible gap-3 lg:gap-2 pb-4 lg:pb-0 snap-x">
+                        <button onclick="filterGallery('all')" class="filter-btn active w-full text-left px-5 py-3 rounded-lg text-sm font-medium bg-primary text-white shadow-md transition-all whitespace-nowrap">All Projects</button>
+                        <button onclick="filterGallery('sofa-work')" class="filter-btn w-full text-left px-5 py-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-all whitespace-nowrap">Sofa Making & Repair</button>
+                        <button onclick="filterGallery('chairs')" class="filter-btn w-full text-left px-5 py-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-all whitespace-nowrap">Chairs (Kursi)</button>
+                        <button onclick="filterGallery('mattress')" class="filter-btn w-full text-left px-5 py-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-all whitespace-nowrap">Mattress & Quilting</button>
+                        <button onclick="filterGallery('curtains')" class="filter-btn w-full text-left px-5 py-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-all whitespace-nowrap">Curtains (Parde)</button>
+                        <button onclick="filterGallery('headboards')" class="filter-btn w-full text-left px-5 py-3 rounded-lg text-sm font-medium text-gray-600 hover:bg-gray-50 transition-all whitespace-nowrap">Bed Headboards</button>
+                    </div>
+                </aside>
+    
+                <div class="w-full lg:w-3/4">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="text-2xl font-bold text-gray-900" id="gallery-heading">All Projects</h3>
+                        <span class="text-sm text-gray-500" id="item-count">Loading...</span>
+                    </div>
+    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="gallery-grid">
+
+
+                        <!-- sofa start  -->
+                        
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="sofa-work">
+                            <img src="sofa cushion/new sofa homa.jpeg" 
+                                 alt="L Shape Sofa" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Sofa Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">L Shape Luxury Sofa</h4>
+                            </div>
+                        </div>
+    
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="sofa-work">
+                            <img src="sofa cushion/old sofa home.jpeg" 
+                                 alt="Corner Sofa" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Sofa Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Modern Corner Set</h4>
+                            </div>
+                        </div>
+
+
+
+    <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="sofa-work">
+                            <img src="sofa cushion/old sofa home.jpeg" 
+                                 alt="Corner Sofa" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Sofa Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Modern Corner Set</h4>
+                            </div>
+                        </div>
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="sofa-work">
+                            <img src="sofa cushion/old sofa home.jpeg" 
+                                 alt="Corner Sofa" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Sofa Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Modern Corner Set</h4>
+                            </div>
+                        </div>
+
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="sofa-work">
+                            <img src="sofa cushion/old sofa home.jpeg" 
+                                 alt="Corner Sofa" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Sofa Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Modern Corner Set</h4>
+                            </div>
+                        </div>
+
+
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="sofa-work">
+                            <img src="sofa cushion/old sofa home.jpeg" 
+                                 alt="Corner Sofa" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Sofa Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Modern Corner Set</h4>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="sofa-work">
+                            <img src="sofa cushion/old sofa home.jpeg" 
+                                 alt="Corner Sofa" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Sofa Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Modern Corner Set</h4>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="sofa-work">
+                            <img src="sofa cushion/old sofa home.jpeg" 
+                                 alt="Corner Sofa" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Sofa Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Modern Corner Set</h4>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="sofa-work">
+                            <img src="sofa cushion/old sofa home.jpeg" 
+                                 alt="Corner Sofa" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Sofa Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Modern Corner Set</h4>
+                            </div>
+                        </div>
+
+
+
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="sofa-work">
+                            <img src="sofa cushion/old sofa home.jpeg" 
+                                 alt="Corner Sofa" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Sofa Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Modern Corner Set</h4>
+                            </div>
+                        </div>
+
+<!-- sofa start  -->
+
+
+<!-- Chairs (Kursi) start -->
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="chairs">
+                            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Accent Chair" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Chair Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Wooden Accent Chair</h4>
+                            </div>
+                        </div>
+
+                         <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="chairs">
+                            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Accent Chair" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Chair Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Wooden Accent Chair</h4>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="chairs">
+                            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Accent Chair" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Chair Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Wooden Accent Chair</h4>
+                            </div>
+                        </div>
+
+
+                         <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="chairs">
+                            <img src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Accent Chair" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Chair Work</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Wooden Accent Chair</h4>
+                            </div>
+                        </div>
+
+
+<!-- Chairs (Kursi) start -->
+
+<!-- Mattress & Quilting start -->
+    
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="mattress">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Mattress" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Mattress</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Custom Size Mattress</h4>
+                            </div>
+                        </div>
+
+                         <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="mattress">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Mattress" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Mattress</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Custom Size Mattress</h4>
+                            </div>
+                        </div>
+
+
+                         <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="mattress">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Mattress" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Mattress</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Custom Size Mattress</h4>
+                            </div>
+                        </div>
+
+
+
+                         <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="mattress">
+                            <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Mattress" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Mattress</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Custom Size Mattress</h4>
+                            </div>
+                        </div>
+
+
+                        
+
+<!-- Mattress & Quilting end -->
+
+
+<!-- Curtains (Parde) start -->
+
+    
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="curtains">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Luxury Curtains" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Home Decor</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Premium Curtains</h4>
+                            </div>
+                        </div>
+
+<div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="curtains">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Luxury Curtains" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Home Decor</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Premium Curtains</h4>
+                            </div>
+                        </div>
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="curtains">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Luxury Curtains" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Home Decor</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Premium Curtains</h4>
+                            </div>
+                        </div>
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="curtains">
+                            <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Luxury Curtains" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Home Decor</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Premium Curtains</h4>
+                            </div>
+                        </div>
+
+    <!-- Curtains (Parde) end -->
+
+
+
+    <!-- Bed Headboards start -->
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="headboards">
+                            <img src="https://images.unsplash.com/photo-1505693416388-b0346efee535?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Bed Headboard" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Bedroom</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Velvet Headboard</h4>
+                            </div>
+                        </div>
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="headboards">
+                            <img src="https://images.unsplash.com/photo-1505693416388-b0346efee535?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Bed Headboard" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Bedroom</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Velvet Headboard</h4>
+                            </div>
+                        </div>
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="headboards">
+                            <img src="https://images.unsplash.com/photo-1505693416388-b0346efee535?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Bed Headboard" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Bedroom</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Velvet Headboard</h4>
+                            </div>
+                        </div>
+
+
+
+                        <div class="gallery-item group relative h-72 rounded-xl overflow-hidden cursor-pointer shadow-md" data-category="headboards">
+                            <img src="https://images.unsplash.com/photo-1505693416388-b0346efee535?q=80&w=800&auto=format&fit=crop" 
+                                 alt="Bed Headboard" loading="lazy"
+                                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            <div class="absolute bottom-0 left-0 p-6 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 opacity-0 group-hover:opacity-100">
+                                <span class="text-primary text-xs font-bold uppercase tracking-wider">Bedroom</span>
+                                <h4 class="text-white text-xl font-bold mt-1">Velvet Headboard</h4>
+                            </div>
+                        </div>
+
+  <!-- Bed Headboards end -->
+    
+                    </div>
+                    
+                    <div id="no-results" class="hidden text-center py-20 bg-white rounded-lg border border-dashed border-gray-300 mt-6">
+                        <i class="ri-image-line text-6xl text-gray-300 mb-4 block"></i>
+                        <p class="text-gray-500 font-medium">No projects found in this category yet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-secondary text-white pt-16 pb-8 border-t-4 border-primary">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                   <a href="index.html" class="flex items-center gap-4 mb-6 group">
+    <div class="h-14 w-14 flex-shrink-0 bg-black rounded-full flex items-center justify-center border-2 border-transparent group-hover:border-primary transition-colors p-1">
+         <img src="./images/ak-logo.png" alt="AK Sofa Logo" class="h-full w-full object-contain">
+    </div>
+   
+    <h3 class="text-2xl font-playfair font-bold text-white tracking-tight">
+      Sofa Cushion
+    </h3>
+</a>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        Your trusted partner for home comfort in Indore. We specialize in Sofa Repairing, Manufacturing, Curtains, and Mattresses with premium quality materials.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-facebook-fill text-lg"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-instagram-line text-lg"></i>
+                        </a>
+                        <a href="https://wa.me/919977243180" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-green-500 transition-colors">
+                            <i class="ri-whatsapp-line text-lg"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-primary">Quick Links</h4>
+                    <ul class="space-y-3 text-gray-400">
+                        <li><a href="./index.html" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="About.html" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="Gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="Contact.html" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-6 text-primary">Locate Us</h4>
+                    <div class="space-y-4 text-gray-400">
+                        <p class="flex items-start gap-3">
+                            <i class="ri-map-pin-line mt-1 text-primary"></i>
+                            Alok Nagar , Mushakedi, Indore
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="ri-phone-fill text-primary"></i>
+                            +91 9977243180
+                        </p>
+                        <p class="flex items-center gap-3">
+                            <i class="ri-mail-line text-primary"></i>
+                            abhishekabhishekharan@gmail.com
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+          <div class="border-t border-gray-700 pt-8 text-center text-gray-500 text-sm">
+    <p>
+        &copy; 2024 AK Sofa Cushion. All rights reserved. | 
+        Designed & Developed by 
+        <a href="https://digitalsuccesssolutions.in/" target="_blank" class="font-bold text-gray-300 hover:text-primary transition-colors">
+            Digital Success Solutions
+        </a>
+    </p>
+</div>
+        </div>
+    </footer>
+    <a href="https://wa.me/919977243180" class="whatsapp-float" target="_blank">
+        <i class="ri-whatsapp-line"></i>
+    </a>
+    <script>
+        // Gallery Filter Logic
+        function filterGallery(category) {
+            const items = document.querySelectorAll('.gallery-item');
+            const buttons = document.querySelectorAll('.filter-btn');
+            const heading = document.getElementById('gallery-heading');
+            const noResults = document.getElementById('no-results');
+            let visibleCount = 0;
+
+            // 1. Update Active Button Style
+            buttons.forEach(btn => {
+                // Remove active styles from all
+                btn.classList.remove('bg-primary', 'text-white', 'shadow-md');
+                btn.classList.add('text-gray-600', 'hover:bg-gray-50');
+                
+                // If this is the clicked button
+                if(btn.getAttribute('onclick').includes(category)) {
+                    btn.classList.remove('text-gray-600', 'hover:bg-gray-50');
+                    btn.classList.add('bg-primary', 'text-white', 'shadow-md');
+                    heading.innerText = btn.innerText;
+                }
+            });
+
+            // 2. Filter Items
+            items.forEach(item => {
+                // Reset Animation
+                item.classList.remove('fade-in-up');
+                void item.offsetWidth; // Force Reflow
+
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.classList.remove('hidden');
+                    item.classList.add('fade-in-up'); 
+                    visibleCount++;
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+
+            // 3. Update Count
+            const countText = document.getElementById('item-count');
+            if (visibleCount > 0) {
+                countText.innerText = `Showing ${visibleCount} project${visibleCount !== 1 ? 's' : ''}`;
+                noResults.classList.add('hidden');
+            } else {
+                countText.innerText = '0 projects';
+                noResults.classList.remove('hidden');
+            }
+        }
+
+        // Initialize Everything on Load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Run default filter
+            filterGallery('all');
+
+            // Initialize GSAP Animation for Hero
+            gsap.registerPlugin(ScrollTrigger);
+            gsap.from(".gallery-header div", { y: 30, opacity: 0, duration: 1, ease: "power3.out" });
+
+            // Mobile Menu Logic
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+
+            if(btn && menu && icon) {
+                btn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    menu.classList.toggle('hidden');
+                    if (menu.classList.contains('hidden')) {
+                        icon.classList.remove('ri-close-line');
+                        icon.classList.add('ri-menu-line');
+                    } else {
+                        icon.classList.remove('ri-menu-line');
+                        icon.classList.add('ri-close-line');
+                    }
+                });
+                document.addEventListener('click', function(e) {
+                    if (!menu.contains(e.target) && !btn.contains(e.target) && !menu.classList.contains('hidden')) {
+                        menu.classList.add('hidden');
+                        icon.classList.remove('ri-close-line');
+                        icon.classList.add('ri-menu-line');
+                    }
+                });
+            }
+        });
+    </script>
+    </body>
+</html>
